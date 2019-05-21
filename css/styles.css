@@ -1,0 +1,405 @@
+body {
+  font-family: 'Oswald', sans-serif;
+  background-image: url("../images/sg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.info {
+  background: #000;
+}
+
+.primary-colour {
+  color: #aea024;
+}
+
+.info a {
+  transition: color 1s ease-in-out;
+}
+
+.info a:hover {
+  color: #FFD700;
+}
+
+/************ HEADER ************/
+#header {
+  min-height: calc(100vh - 94px);
+  background-image: url("../images/banner-bcg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
+}
+
+.banner h1 {
+  background: #47452a;
+  width: 348px;
+  line-height: 50px;
+  letter-spacing: 15px;
+  border-top: 6px solid #000;
+  border-bottom: 6px solid #000;
+  animation: fromLeft;
+  animation-duration: 2.5s;
+  animation-delay: 1s;
+  opacity: 0;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fromLeft {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+
+  50% {
+    transform: translateX(50px);
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.height-90 {
+  min-height: calc(100vh - 94px);
+}
+
+.main-btn {
+  color: #aea024;
+  font-size: 2rem;
+  background: #000;
+}
+
+.main-btn:hover {
+  color: #fff;
+  background: #aea024;
+}
+
+.order-btn {
+  animation: fromRight;
+  animation-duration: 2.5s;
+  animation-delay: 0.5s;
+  opacity: 0;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fromRight {
+  0% {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+
+  50% {
+    transform: translateX(-50px);
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.header-link {
+  display: inline-block;
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  background: #000;
+  border-radius: 10px;
+  animation-name: fromBottom;
+  animation-duration: 2.5s;
+  animation-delay: 0.5s;
+  animation-iteration-count: infinite;
+}
+
+.header-link:hover {
+  color: #fff;
+  background: #47452a;
+}
+
+@keyframes fromBottom {
+  0% {
+    transform: translateY(-10px);
+  }
+
+  50% {
+    transform: translateY(10px);
+  }
+
+  100% {
+    transform: translateY(-10px);
+  }
+}
+
+/************* NAVBAR ************/
+.navbar {
+  background: #16161d;
+  padding: 20px 20px;
+  transition: all 1s ease;
+  opacity: 0.8;
+}
+
+.navbar-background {
+  padding: 5px 20px;
+}
+
+.navbar-brand {
+  font-size: 20px;
+  transition: all 1s ease;
+}
+
+.navbar-brand:hover {
+  color: #fff;
+}
+
+.nav-link {
+  color: #fff;
+  text-decoration: none;
+  transition: all 1s ease;
+  font-size: 19px;
+}
+
+.nav-link:hover {
+  color: #aea024;
+}
+
+.nav-btn {
+  background: transparent;
+  color: #aea024;
+  border: 2px solid #aea024;
+  font-size: 20px;
+}
+
+.nav-btn:hover {
+  color: #fff;
+  transition: all 1s ease;
+  border: 2px solid #fff;
+  transform: rotate(10deg);
+}
+
+.toggler-btn {
+  border: 2px solid #47452a;
+  padding: 5px;
+  transition: all 1s ease;
+}
+
+.bar {
+  width: 30px;
+  height: 3px;
+  margin: 5px;
+  background: #47452a;
+  transition: all 0.5s ease;
+}
+
+.change .bar1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.change .bar2 {
+  opacity: 0;
+}
+
+.change .bar3 {
+  transform: rotate(45deg) translate(-5px, -8px);
+}
+
+/************* MENU ITEMS ************/
+.item-container {
+  position: relative;
+  /* for the link */
+  overflow: hidden;
+  background: linear-gradient(#000, #000);
+  transition: all 2s ease;
+}
+
+.item-img {
+  transition: all 2s ease;
+}
+
+.item-container:hover .item-img {
+  transform: scale(1.2);
+  opacity: 0.5;
+}
+
+.item-link {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #000;
+  font-size: 2rem;
+  border-top: 3px solid #000;
+  border-bottom: 3px solid #000;
+  transition: all 1.5s ease;
+  opacity: 0;
+}
+
+.item-container:hover .item-link {
+  opacity: 1;
+}
+
+.item-link:hover {
+  color: #fff;
+  border: 3px solid;
+  background: #000;
+  color: #fff;
+}
+
+.item-container:hover {
+  outline: 10px solid #000;
+  outline-offset: 0.8rem;
+}
+
+/************* MENU ************/
+#menu {
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7));
+}
+
+.special {
+  border: 3px solid #000;
+  position: relative;
+}
+
+.special-text {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: #47452a;
+  padding: 0 0.4rem;
+  background: #aea024;
+}
+
+/************* ABOUT ************/
+.about-pictures {
+  position: relative;
+}
+
+.about-image {
+  position: absolute;
+  width: 200px;
+  transition: all 2s ease;
+  opacity: 0.9;
+}
+
+.img-1 {
+  left: 0%;
+  top: 0%;
+}
+
+.img-2 {
+  left: 20%;
+  top: 20%;
+  z-index: 10;
+}
+
+.img-3 {
+  left: 40%;
+  top: 45%;
+  z-index: 20;
+}
+
+.img-4 {
+  left: 40%;
+  top: 0%;
+}
+
+.img-5 {
+  left: 0%;
+  top: 45%;
+}
+
+.about-image:hover {
+  outline: 10px solid #aea024;
+  outline-offset: 0.8rem;
+  transform: scale(1.6) rotate(15deg);
+  z-index: 30;
+  opacity: 1;
+}
+
+.about-pictures:hover .about-image:not(:hover) {
+  opacity: 0.5;
+}
+
+/************* Review SECTION ************/
+.review-item {
+  background: rgba(255, 255, 255, 0.7);
+  clip-path: polygon(5% 0, 100% 0, 90% 100%, 0 100%);
+}
+
+.review-img {
+  width: 150px;
+}
+
+/************* TEAM SECTION ************/
+.team-icons a {
+  color: #3b5998;
+  transition: all 1s ease-in-out;
+}
+
+.team-icons a:hover {
+  color: #242424;
+  transform: translateY(-5px);
+}
+
+/************* CONTACT SECTION ************/
+.height-60 {
+  min-height: 60vh;
+}
+
+#contact .card {
+  background: rgba(0, 0, 0, 0.5);
+  transition: all 1s ease;
+}
+
+#contact .card:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+#contact .card-header {
+  color: #aea024;
+}
+
+#contact .input-group-text {
+  background: #aea024;
+  border-color: #aea024;
+  color: #242424;
+}
+
+#contact .card input {
+  color: #606060;
+}
+
+#contact .card input:placeholder {
+  color: #606060;
+}
+
+.contact-btn {
+  color: #aea024;
+  border-color: #aea024;
+  background: transparent;
+  transition: all 1s ease-in-out;
+}
+
+.contact-btn:hover {
+  background: #47452a;
+  color: #aea024;
+  border-color: #aea024;
+}
+
+/************* FOOTER SECTION ************/
+#back-to-top {
+  background: #000;
+  color: #47452a;
+  border-radius: 10px;
+  display: inline-block;
+}
+
+.scrollTop {
+  position: fixed;
+  bottom: 70px;
+  right: 10px;
+}
